@@ -8,11 +8,10 @@ def admin_page(page: ft.Page):
         page.clean()
         solicitudes_page(page)
 
-    # Lista de secciones del panel (por ahora solo una)
+    # para luego agregar mas 
     secciones = [
         ("Solicitudes", ft.Icons.DESCRIPTION, abrir_solicitudes),
-        # ("Inventario", ft.Icons.INVENTORY, abrir_inventario),
-        # ("Reportes", ft.Icons.ANALYTICS, abrir_reportes)
+       
     ]
 
     cards = []
