@@ -1,17 +1,21 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
-[project]
+[tool.poetry]
 name = "mi_proyecto_flet"
 version = "0.1.0"
 description = "Proyecto universitario PWA en Flet"
-dependencies = [
-    "flet >= 0.24.0",
-]
+authors = ["Diego"]
+package-mode = false
 
-[tool.hatch.build.targets.wheel]
-packages = ["src"]
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+flet = "^0.28.0"
+requests = "^2.31.0"
+
+[tool.poetry.scripts]
+run = "main:main"
 
 [tool.flet]
-web-renderer = "html"  # O "canvaskit" para mejor rendimiento
+web-renderer = "html"
